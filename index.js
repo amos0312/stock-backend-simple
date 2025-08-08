@@ -24,15 +24,15 @@ app.post("/webhook", async (req, res) => {
   const { ticker, price } = req.body;
   console.log("ticker", ticker, price);
 
-  if (price < 200) {
+  if (price < 210) {
     const { error } = await supabase
       .from("alerts")
       .insert({
         symbol: ticker,
         current_price: price,
         // date: new Date().toISOString(),
-        reason: "Price < $200 alert",
-        target_price: 200,
+        reason: "Price < $210 alert",
+        target_price: 210,
         action_taken: 'Alert logged'
       });
 
