@@ -12,6 +12,14 @@ const supabase = createClient(
   process.env.SUPABASE_KEY
 );
 
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    timestamp: new Date().toISOString(),
+    service: 'Stock Automation System backend is running...'
+  });
+});
+
 app.post("/webhook", async (req, res) => {
   const { ticker, price } = req.body;
   console.log("ticker", ticker, price);
@@ -39,7 +47,7 @@ app.get('/health', (req, res) => {
   res.json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    service: 'GPT Stock Automation System'
+    service: 'Stock Automation Backend System'
   });
 });
 
