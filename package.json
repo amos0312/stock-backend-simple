@@ -1,0 +1,29 @@
+{
+  "name": "stock-automation-system",
+  "version": "1.0.0",
+  "description": "A lightweight automation system for stock price monitoring and alerts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stock",
+    "automation",
+    "finnhub",
+    "supabase",
+    "n8n",
+    "webhook"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "openai": "^5.12.1"
+  }
+}
